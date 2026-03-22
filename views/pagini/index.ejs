@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <title>Olfacto - Parfumuri de Nișă</title>
+  <meta name="description" content="Magazin online de parfumuri de nisa pentru femei, barbati si unisex.">
+  <meta name="keywords"
+    content="parfumuri, cosmetice, produse de ingrijire personala, make-up, accesorii de frumusete, nisate, parfumuri de lux, parfumuri pentru femei, parfumuri pentru barbati, parfumuri unisex, parfumuri originale, parfumuri de calitate, parfumuri la preturi accesibile, parfumuri online, magazin de parfumuri online, parfumuri Bucuresti, parfumuri Romania, parfumuri de firma, parfumuri de nisa, parfumuri de lux online, parfumuri de calitate superioara, parfumuri pentru toate gusturile, parfumuri pentru toate ocaziile.">
+  <%- include("../fragmente/head") %>
+</head>
+
+<body>
+  <%- include("../fragmente/header.ejs") %>
+  <main> <!--  comentariu -->
+    <div id="grid-pagina">
+
+      <section id="welcome">
+        <hgroup>
+          <h2>Bine ați venit la Olfacto</h2>
+          <p class="subtitlu">Parfumeria de nișă preferată a cunoscătorilor</p>
+        </hgroup>
+
+        <blockquote>
+          <p>„Un parfum este o formă de artă care se realizează cu ingrediente invizibile."</p>
+          <footer>— <cite>Perfume: The Art and Science of Scent</cite>, de Cathy Newman</footer>
+        </blockquote>
+
+        <p class="intro">Vă mulțumim pentru vizită. Descoperiți universul <dfn
+            title="Parfumuri de nișă sunt produse create de case independente de parfumerie, cu ingrediente rare și limitate.">parfumurilor
+            de nișă</dfn>, unde fiecare produs spune o poveste unică.</p>
+
+        <div class="intro-oferte">
+          <div>Parfumuri pentru femei</div>
+          <div>Parfumuri pentru bărbați</div>
+          <div>Parfumuri unisex</div>
+          <div>Seturi cadou</div>
+          <div>Mostre și discovery sets</div>
+        </div>
+        <p class="anunt intro">Puteți explora colecțiile noastre atât în boutique-ul nostru din București, cât și
+          online, cu livrare rapidă prin curier în toată România.</p>
+        <div id="dv-prezentare-1">
+          <div id="dv-prezentare">
+            <picture>
+              <!-- il ia pe primul care se potriveste cu query-ul din media-->
+              <source srcset="/resurse/imagini/macarons-200x200.jpg" media="(max-width:700px)" />
+              <source srcset="/resurse/imagini/macarons.jpg" media="(max-width:1200px)" />
+              <img src="/resurse/imagini/colectie.jpg" alt="colecție parfumuri de nișă" />
+            </picture>
+          </div>
+        </div>
+        <hr class="prajituri" />
+        <div id="container-video">
+          <img style="width:50%" class="farfurie" src="/resurse/imagini/Adobe Express - file1.jpg" alt="flacon parfum"
+            title="Un flacon elegant de parfum">
+          <div id="centrare-video">
+            <div id="clip-video">
+              <div id="stil-video">
+                <video width="320" height="240" playsinline autoplay loop muted>
+                  <source src="resurse/video/Chocolate.mp4" type="video/mp4">
+                  <source src="resurse/video/Chocolate.ogv" type="video/ogv">
+                  <track default
+                    src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo="
+                    kind="captions" srclang="ro" label="romana">
+                  <track
+                    src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo="
+                    kind="captions" srclang="en" label="engleza">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="promotii">
+        <h2>Promoții și oferte</h2>
+        <article>
+          <h3 class="titlu">Super ofertă de weekend</h3>
+          <p><b>Olfacto</b> oferă <b>reduceri de <s>10%</s> <ins>15%</ins></b> pentru toate parfumurile achiziționate în
+            weekendul 10-14.</p>
+          <p>Oferta este valabilă doar în zilele de sâmbătă și duminică în boutique-ul <abbr
+              title="Olfacto Parfumerie de Nișă">Olfacto</abbr>.</p>
+          <p>În cazul în care achiziționați mai mult de trei <b>parfumuri</b>, primiți și un card de fidelitate Olfacto!
+          </p>
+        </article>
+        <article>
+          <h3>Ofertă pachet</h3>
+          <p>Olfacto oferă pachete cadou cuprinzând:</p>
+          <ol>
+            <li><i lang="en">Eau de Parfum</i> 100ml la alegere</li>
+            <li>Un set de 4 mostre din colecții diferite</li>
+            <li>O lumânare parfumată la alegere</li>
+            <li>Un <i>body lotion</i> asortat</li>
+            <li>Gratis: un săculeț de lavandă parfumat cu inițiala brandului</li>
+            <li>Gratis: o felicitare personalizată cu mesajul dumneavoastră</li>
+            <li>Gratis: ambalaj premium cadou (cutie elegantă cu panglică de mătase și hârtie de tissue parfumată).
+            </li>
+          </ol>
+
+        </article>
+        <article>
+          <h3>Parfumuri de toamnă</h3>
+          <p>Toamna este sezonul notelor calde, lemnoase și misterioase!</p>
+          <p>Colecția noastră de toamnă include parfumuri cu note deosebite:</p>
+          <ol>
+            <li>Note de bază cu oud, santal și ambră — ideale pentru serile răcoroase de toamnă.</li>
+            <li>Compoziții cu scorțișoară, vanilie și tonka care vă vor înfășura într-o aură caldă și reconfortantă.
+            </li>
+            <li>Nu ratați edițiile limitate — odată epuizate, nu se mai refac. Ați fost avertizați.</li>
+
+          </ol>
+
+        </article>
+        <article>
+          <h3>Parfumuri pentru Anul Nou</h3>
+          <p>La începutul fiecărui an meritați un nou început olfactiv. Alegeți o fraganță proaspătă care să vă
+            definească anul ce urmează. La Olfacto avem selecții speciale de Revelion — parfumuri festive,
+            strălucitoare, cu note de șampanie, trandafir și mosc alb, perfecte pentru nopțile magice de sărbători.</p>
+          <p>După cum spunem noi: <q>Fiecare an nou merită un miros nou.</q></p>
+          <p>Și da, <em>chiar</em> <em>merită</em> să investiți într-un parfum de calitate — veți simți diferența!</p>
+        </article>
+      </section>
+      <section id="popularitate">
+        <h2>Popularitatea colecțiilor</h2>
+        <p>Număr de participanți la evenimentul de lansare colecția de toamnă:
+          <meter value="187" min="0" max="250" low="50" high="200" optimum="250">187 din 250</meter>
+        </p>
+        <p>Nivelul stocului pentru parfumul „Amber Noir" (ediție limitată):
+          <meter value="12" min="0" max="100" low="20" high="80" optimum="100">12 din 100</meter>
+        </p>
+      </section>
+      <section id="produse">
+        <h2>Produsele noastre</h2>
+        <p>Vă oferim o selecție rafinată de parfumuri de nișă, alese cu grijă din cele mai apreciate case de parfumerie
+          din lume.</p>
+        <section>
+          <h3>Parfumuri pentru femei</h3>
+          <p>Eleganță, rafinament și feminitate — într-un singur flacon.</p>
+          <p>Note predominante:</p>
+          <ul>
+            <li>florale (trandafir, iasomie, bujor)</li>
+            <li>fructate (piersică, coacăze, pere)</li>
+            <li>orientale (vanilie, ambră, mosc)</li>
+            <li>pudrate (iris, violetă, heliotrope)</li>
+            <li>gourmand (caramel, ciocolată, praline)</li>
+            <li>chypre (bergamotă, mușchi de stejar, patchouli)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Parfumuri pentru bărbați</h3>
+          <p>Oferim atât clasice incontestabile, cât și creații moderne pentru bărbatul contemporan.</p>
+          <p>Note predominante:</p>
+          <ul>
+            <li>lemnoase (cedru, vetiver, santal)</li>
+            <li>aromatice (lavandă, rozmarin, salvie)</li>
+            <li>fougère (cumarin, mușchi, lavandă)</li>
+            <li>pielărie (piele, tabac, oud)</li>
+            <li>citrice (bergamotă, lămâie, grapefruit)</li>
+            <li>condimentate (piper negru, cardamom, ghimbir)</li>
+            <li>marine (note acvatice, sare de mare)</li>
+            <li>fumé (tămâie, gudron de mesteacăn, vetiver afumat)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Parfumuri unisex</h3>
+          <p>Fraganțe fără frontiere, create pentru cine îndrăznește să fie diferit:</p>
+          <ul>
+            <li>note de ceai verde și bergamotă</li>
+            <li>combinații oud și trandafir</li>
+            <li>acorduri de mușchi alb și cedru</li>
+            <li>fuziuni de lavandă și vanilie</li>
+            <li>compoziții experimentale (surpriză olfactivă la fiecare pulverizare)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Glosar parfumerie</h3>
+          <dl>
+            <dt><dfn>Sillage</dfn></dt>
+            <dd>Urma olfactivă pe care o lasă un parfum în jurul persoanei care îl poartă.</dd>
+            <dt><dfn>Note de bază</dfn></dt>
+            <dd>Ingredientele care persistă cel mai mult într-un parfum, resimțite după ce notele de vârf și cele de
+              mijloc se estompează (de exemplu: ambră, mosc, santal).</dd>
+          </dl>
+        </section>
+      </section>
+      <section id="orar">
+        <h2>Orar</h2>
+        <table id="tab-orar">
+          <caption>Programul de funcționare al boutique-ului Olfacto</caption>
+          <thead>
+
+            <tr>
+              <th>Cod</th>
+              <th>Perioadă</th>
+              <th>Zi</th>
+              <th>Interval dimineață</th>
+              <th>Pauza de masă</th>
+              <th>Interval seară</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td rowspan="5">Zile<br />Lucrătoare</td>
+              <td>Luni</td>
+              <td>10-12</td>
+              <td>12-14</td>
+              <td>14-20</td>
+            </tr>
+            <tr>
+              <td></td>
+
+              <td>Marți</td>
+              <td>9-12</td>
+              <td>12-14</td>
+              <td>14-21</td>
+            </tr>
+            <tr>
+              <td></td>
+
+              <td>Miercuri</td>
+              <td>9-11</td>
+              <td>11-13</td>
+              <td>14-21</td>
+            </tr>
+            <tr>
+              <td></td>
+
+              <td>Joi</td>
+              <td>9-11</td>
+              <td>11-13</td>
+              <td>14-21</td>
+            </tr>
+            <tr>
+              <td></td>
+
+              <td>Vineri</td>
+              <td>9-12</td>
+              <td>12-14</td>
+              <td>14-19</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td rowspan="2">Weekend</td>
+              <td>Sâmbătă</td>
+              <td>10-12</td>
+              <td>12-13</td>
+              <td>13-16</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Duminică</td>
+              <td>10-14</td>
+              <td>-</td>
+              <td>închis</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">Închis cu ocazia sărbătorilor legale. Pentru comenzi online, livrăm în toată România.</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p><strong>Atenție!</strong> În prima zi a lunii organizăm sesiuni exclusive de testare a noilor colecții.</p>
+      </section>
+      <figure id="fig1" class="fg-img">
+        <img src="resurse/imagini/noname_13-perfume-2142817_1920 (1).jpg" alt="parfum floral"
+          title="Parfum cu note florale delicate de trandafir și iasomie">
+        <figcaption>Parfum floral 1</figcaption>
+      </figure>
+      <figure id="fig2" class="fg-img">
+        <img src="resurse/imagini/sponchia-fragrance-3619762_1920 (2).jpg" alt="parfum lemnos"
+          title="Parfum cu note lemnoase de cedru și vetiver">
+        <figcaption>Parfum lemnos 2</figcaption>
+      </figure>
+      <figure id="fig3" class="fg-img">
+        <img src="resurse/imagini/nad_dyagileva-perfume-2445617_1920 (1).jpg" alt="parfum oriental"
+          title="Parfum oriental cu ambră și vanilie">
+        <figcaption>Parfum oriental 3</figcaption>
+      </figure>
+      <figure id="fig4">
+        <img src="resurse/imagini/nad_dyagileva-perfume-2445617_1920 (1).jpg" alt="parfum unisex"
+          title="Parfum unisex cu ceai verde și bergamotă">
+        <figcaption>Parfum unisex 4</figcaption>
+      </figure>
+      <section id="anunturi">
+        <h2 class="fg-img">Anunțuri</h2>
+        <p><time datetime="2025-07-20">20 iulie 2025</time> Am adăugat în portofoliu noua colecție exclusivă de vară —
+          note acvatice și citrice, perfecte pentru zilele fierbinți.</p>
+        <p><time datetime="2022-01-05">5 ianuarie 2022</time> <strong>Am relansat boutique-ul fizic cu o experiență
+            olfactivă complet nouă!</strong></p>
+
+        <p><time datetime="2020-03-15">15 martie 2020</time> <span>Am introdus în colecție brandul Maison Francis
+            Kurkdjian.</span></p>
+        <p><time datetime="2020-04-05">5 aprilie 2020</time> <span>Am adăugat parfumuri noi de la Byredo.</span></p>
+        <p><time datetime="2020-07-05">5 iulie 2020</time> Colecția de vară Acqua di Parma este disponibilă acum.</p>
+        <p><time datetime="2020-09-15">15 septembrie 2020</time> Am lansat serviciul de consultanță olfactivă
+          personalizată.</p>
+        <p><time datetime="2020-12-20">20 decembrie 2020</time> Seturile cadou de Crăciun sunt acum disponibile —
+          ambalaj festiv inclus.</p>
+        <p><time datetime="2020-12-28">28 decembrie 2020</time> Am adăugat noi mostre discovery set din colecția Tom
+          Ford Private Blend.</p>
+        <p><time datetime="2021-01-01">1 ianuarie 2021</time> Un an nou parfumat și plin de arome deosebite vă dorim!
+        </p>
+        <p><time datetime="2021-02-11">11 februarie 2021</time> Studiile au arătat că un parfum potrivit îți poate
+          îmbunătăți starea de spirit și încrederea în sine.
+          La Olfacto, vă ajutăm să găsiți fraganța care vi se potrivește perfect. </p>
+      </section>
+      <section id="index-intrebari">
+        <h2>Întrebări frecvente</h2>
+        <details>
+          <summary>Parfumurile dumneavoastră sunt originale?</summary>
+          <p>Absolut! Toate parfumurile comercializate de Olfacto sunt 100% originale, achiziționate direct de la casele
+            de parfumerie sau de la distribuitorii autorizați.</p>
+        </details>
+        <details>
+          <summary>Pot testa parfumurile înainte de a cumpăra?</summary>
+          <p>Da! Oferim mostre și discovery sets pentru majoritatea parfumurilor din colecție. De asemenea, vă așteptăm
+            în boutique-ul nostru pentru sesiuni de testare.</p>
+        </details>
+        <details>
+          <summary>Care este diferența dintre Eau de Parfum și Eau de Toilette?</summary>
+          <p>Eau de Parfum (EDP) conține o concentrație mai mare de uleiuri esențiale (15-20%), oferind o persistență
+            mai mare. Eau de Toilette (EDT) are o concentrație de 5-15%, fiind mai ușoară și ideală pentru utilizare
+            zilnică.</p>
+        </details>
+        <details>
+          <summary>Oferiți consultanță pentru alegerea unui parfum?</summary>
+          <p>Da! Echipa noastră de consultanți olfactivi vă poate ghida în alegerea parfumului perfect, fie în boutique,
+            fie online prin chat sau e-mail.</p>
+        </details>
+      </section>
+
+      <aside id="sfat-zilei">
+        <h3>Sfatul zilei</h3>
+        <p>Aplicați parfumul pe punctele de puls: încheieturi, gât, spatele urechilor, pentru o performanță optimă a
+          parfumului pe parcursul zilei.</p>
+      </aside>
+
+      <section id="resurse-externe">
+        <h2>Resurse utile</h2>
+        <p>Descoperiți mai multe despre parfumuri pe
+          <a href="https://www.fragrantica.com" target="_blank" rel="noopener">Fragrantica<wbr>.com</a>
+        </p>
+
+        <p>Citiți despre notele olfactive pe
+          <a
+            href="https://en.wikipedia.org/wiki/Perfume#Fragrance_families">https://en.wikipedia<wbr>.org/wiki/<wbr>Perfume#Fragrance<wbr>_families</a>
+        </p>
+
+        <p>
+          <a href="resurse/imagini/macarons-640x360.jpg">
+            <img src="resurse/imagini/blendertimer-magnifying-glass-9219927_1920 (2).png" alt="colecție parfumuri">
+          </a>
+        </p>
+
+        <p>Descarcă catalogul nostru:
+          <a href="resurse/catalog.png" download="catalog_olfacto.png">Descarcă catalogul Olfacto</a>
+        </p>
+      </section>
+
+    </div>
+    <section id="galerie-statica">
+      <h2>Galerie</h2>
+      <div id="grid-galerie">
+        <figure>
+          <div>
+            <img src="resurse/imagini/mwkum9772-perfume-6013027_1920 (2).jpg" alt="parfum de nișă">
+          </div>
+          <figcaption>Parfum de nișă</figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="resurse/imagini/dcwilliams-serum-7675105_1920 (1).jpg" alt="parfum de nișă">
+          </div>
+          <figcaption>Parfum de nișă</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="ghid">
+      <h2>Ghid olfactiv</h2>
+      <p>Dacă doriți să înțelegeți mai bine lumea parfumurilor de nișă și să învățați cum se construiește o compoziție
+        olfactivă,
+        vă recomandăm următoarele video-uri educative despre familiile olfactive, piramida unui parfum
+        și arta de a alege parfumul perfect. Vizionare plăcută!</p>
+      <div class="container-iframe">
+        <div class="taburi-iframe">
+          <a href="https://www.youtube.com/embed/yINqps4aEuQ" target="ifr-video">Cum să alegi parfumul potrivit</a>
+          <a href="https://www.youtube.com/embed/GUKoD2meZHk" target="ifr-video">Familiile olfactive explicate</a>
+          <a href="https://www.youtube.com/embed/nkUvSwXiyjM" target="ifr-video">Top parfumuri de nișă 2026</a><br />
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yINqps4aEuQ" name="ifr-video"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </div>
+    </section>
+
+  </main>
+ <%- include("../fragmente/footer.ejs") %>
+</body>
+
+</html>
