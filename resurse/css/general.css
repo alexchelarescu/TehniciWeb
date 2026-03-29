@@ -125,39 +125,58 @@ iframe {
 
 .container-iframe {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    height: 315px;
-    width: fit-content;
-    width: 600px;
-    gap:0;
+    flex-direction: column; 
+    align-items: flex-end;       
+    width: 100%;
+    max-width: 600px;
+    gap: 0;                      
+}
+
+.container-iframe iframe {
+    width: 100%;   
+    max-width: 800px; 
+    height: 420px;    
+    border-radius: 12px; 
+    border: 1px solid var(--culoare-contur);
+    margin-bottom: 0;          
 }
 
 .taburi-iframe {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    height: 100%;
-    justify-content: flex-start;
-    border: 1px solid var(--culoare-contur);
+    flex-direction: row; 
+    justify-content: flex-end;  
+    gap: 8px;                    
+    width: 100%;
 }
 
 .taburi-iframe > a {
     display: flex;
-    padding: 10px;
+    padding: 3px 3px 3px 10px;      
+    font-size: 0.80rem;     
+    border-radius: 0 0 10px 10px; 
     background-color: var(--culoare-fundal);
     border: 1px solid var(--culoare-contur);
     color: var(--culoare-text);
     text-decoration: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 5px;
-    transition: all 0.1s linear;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+
+    border: 1px solid var(--culoare-contur);
+    box-shadow: 
+        inset 2px 2px 2px var(--culoare-contur),    
+        inset 2px -3px 2px var(--culoare-contur),   
+        inset 2px 2px 2px var(--culoare-contur),   
+        inset -2px 2px 2px var(--culoare-contur);
+    border-radius: 12px;
+    background-color: var(--culoare-fundal);
+    padding: 10px;
 }
+
 .taburi-iframe > a:hover { 
     background-color: var(--culoare-contur);
-    color: white;
+    color: var(--culoare-fundal);
 }
+
 
 /* Stilizare orar */
 
@@ -168,10 +187,9 @@ iframe {
 }
 
 #tab-orar {
-    border-collapse: collapse;
     width: 100%;
-    border: 1px double var(--culoare-contur);
-    background-color: var(--culoare-fundal);
+    border-collapse: collapse; 
+    background-color: transparent; 
 }
 
 #tab-orar caption {
@@ -181,36 +199,49 @@ iframe {
     color: var(--culoare-text);
 }
 
-#tab-orar td:nth-last-child(odd) {
-    color: var(--culoare-text);
-}
-
-#tab-orar td:nth-last-child(even) {
-    color: var(--culoare-highlight);
-}
-
-#tab-orar tbody tr:has(td:not(.alb):hover) td:not(.alb) {
-    background-color: var(--culoare-contur); 
-    color: var(--culoare-fundal);                
-    box-shadow: inset 1px 1px 1px 2px var(--culoare-text);
-}
-
-#tab-orar thead {
-    background-color: var(--culoare-fundal);
-    font-weight: bold;
-}
-
-#tab-orar td, th {
-    border: 1px solid var(--culoare-text);
+#tab-orar td, 
+#tab-orar th {
+    border: 1px solid var(--culoare-contur);
     text-align: center;
-    padding: 5px;
-    transition: all 0.33s ease; 
+    padding: 10px;
+    background-color: transparent;
+    
+    transition: font-size 0.75s ease, background-color 0.75s ease;
 }
 
-#tab-orar td.alb {
-    background-color: var(--culoare-fundal); 
-    border-width: 1px;
+#tab-orar td.spanning {
+    border-top: none;
+    border-bottom: none;
+    background-color: var(--culoare-fundal);
+    color: transparent;
+}
+
+#tab-orar thead th {
+    border: 3px solid var(--culoare-contur);
     font-weight: bold;
+    
+}
+
+
+#tab-orar tbody tr:nth-child(even) {
+    
+    box-shadow: inset 0 0 10px rgba(194, 157, 137, 0.3); 
+    color: var(--culoare-text); 
+}
+
+
+#tab-orar tbody tr:nth-child(odd) {
+    box-shadow: inset 0 0 10px rgba(43, 35, 33, 0.15); 
+    color: #555555; 
+}
+
+
+#tab-orar tbody tr:hover td {
+    background-color: var(--culoare-highlight); 
+    color: var(--culoare-fundal);
+    
+   
+    font-size: 120%; 
 }
 
 /* Stilizare link-top */
@@ -243,7 +274,7 @@ iframe {
                 border-color 0.4s ease;
 }
 
-/* Starea de HOVER a arcadei */
+/* Starea de hover a arcadei */
 #buton-sus:hover {
     opacity: 1;
     background-color: #C29D89;
@@ -369,4 +400,21 @@ header.header-principal img {
   padding: 15px;
   background: var(--culoare-detalii);
   border-radius: 8px;
+}
+
+@media screen and (max-width:1200px) {
+    .tabel-container {
+        overflow-x: auto;
+    }
+    #tab-orar {
+        min-width: 600px;
+    }
+}
+@media screen and (max-width:800px) {
+    .tabel-container {
+        overflow-x: auto;
+    }
+    #tab-orar {
+        min-width: 600px;
+    }
 }
