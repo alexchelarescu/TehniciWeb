@@ -15,12 +15,17 @@ body {
     --culoare-contur: #E1C6B8;    
     --culoare-highlight: #C29D89;
     --culoare-detalii: #EFE6E1;
+
     
     font-size: 18px;
     line-height: 1.5;
     --margine-pagina: 100px;
     background-color: var(--culoare-fundal);
     color: var(--culoare-text);
+    --gap-pagina: 25px;
+    --padding-zona: 12px;
+    --media-max-width: 900px;
+    --media-min-width: 160px;
 }
 
 main {
@@ -36,16 +41,20 @@ p {
     display: grid;
     gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:    "welcome welcome welcome welcome"
-                            "welcome welcome welcome welcome"
-                            "lista-utilizatori-online statistici statistici despre-site-server"
-                            "calendar-evenimente calendar-evenimente orar orar"
-                            "anunturi anunturi orar orar"
-                            "produse produse produse produse"
-                            "promotii promotii promotii promotii"
-                            "index-intrebari index-intrebari index-intrebari index-intrebari"
-                            "informative-videos informative-videos dictionar dictionar"
-                            "galerie-statica galerie-statica galerie-statica galerie-statica";
+    grid-template-areas:    
+        "welcome welcome welcome welcome"
+        "lista-utilizatori-online statistici statistici despre-site-server"
+        "calendar-evenimente calendar-evenimente orar orar"
+        "anunturi anunturi orar orar"
+        "produse produse produse produse"
+        "fig1 fig2 fig3 fig4"
+        "promotii promotii promotii promotii"
+        "index-intrebari index-intrebari index-intrebari index-intrebari"
+        "galerie galerie galerie galerie"
+        "reduceri reduceri reduceri reduceri"
+        "ghid ghid ghid ghid"
+        "popularitate popularitate sfat-zilei sfat-zilei"
+        "resurse-externe resurse-externe resurse-externe resurse-externe";
 }
 
 #grid-pagina > *, header, footer {
@@ -54,6 +63,7 @@ p {
     border-radius: 12px;
     background-color: var(--culoare-fundal);
     padding: 10px;
+    min-width: 0;
 }
 
 figure { 
@@ -83,21 +93,11 @@ iframe {
 #welcome {
     grid-area: welcome; 
 }
-#reduceri {
-    grid-area: reduceri;
+
+#ghid {
+    grid-area: ghid;
 }
-#despre-brand {
-    grid-area: despre-brand;
-}
-#galerie-statica {
-    grid-area: galerie-statica;
-}
-#informative-videos {
-    grid-area: informative-videos;
-}
-#dictionar {
-    grid-area: dictionar;
-}
+
 #promotii {
     grid-area: promotii;
 }
@@ -122,7 +122,36 @@ iframe {
 #despre-site-server {
     grid-area: despre-site-server;
 }
-
+#calendar-evenimente {
+    grid-area: calendar-evenimente;
+}
+#reduceri { 
+    grid-area: reduceri;
+ }
+#dictionar {
+     grid-area: dictionar;
+     }
+#popularitate {
+     grid-area: popularitate;
+     }
+#sfat-zilei {
+     grid-area: sfat-zilei;
+     }
+#resurse-externe {
+     grid-area: resurse-externe; 
+    }
+#fig1 { 
+    grid-area: fig1;
+ }
+#fig2 { 
+    grid-area: fig2;
+ }
+#fig3 {
+     grid-area: fig3;
+     }
+#fig4 {
+     grid-area: fig4;
+     }
 .container-iframe {
     display: flex;
     flex-direction: column; 
@@ -150,8 +179,7 @@ iframe {
 }
 
 .taburi-iframe > a {
-    display: flex;
-    padding: 3px 3px 3px 10px;      
+    display: flex;   
     font-size: 0.80rem;     
     border-radius: 0 0 10px 10px; 
     background-color: var(--culoare-fundal);
@@ -308,26 +336,36 @@ iframe {
 
     body {
         --margine-pagina: 20px;
-    }
+        --gap-pagina: 20px;
+        --padding-zona: 10px;
+        --media-max-width: 700px; } 
 
     #grid-pagina {
         display: grid;
-        gap: 25px;
+        gap: 20px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:    "welcome welcome welcome welcome"
-                                "lista-utilizatori-online statistici statistici despre-site-server"
-                                "calendar-evenimente calendar-evenimente orar orar"
-                                "anunturi anunturi orar orar"
-                                "produse produse produse produse"
-                                "promotii promotii index-intrebari index-intrebari"
-                                "informative-videos informative-videos dictionar dictionar"
-                                "galerie-statica galerie-statica galerie-statica galerie-statica";
+        grid-template-areas:    
+        "welcome welcome welcome welcome"
+        "lista-utilizatori-online statistici statistici despre-site-server"
+        "calendar-evenimente calendar-evenimente orar orar"
+        "anunturi anunturi orar orar"
+        "produse produse produse produse"
+        "fig1 fig2 fig3 fig4"
+        "promotii promotii promotii promotii"
+        "index-intrebari index-intrebari index-intrebari index-intrebari"
+        "galerie galerie galerie galerie"
+        "reduceri reduceri reduceri reduceri"
+        "ghid ghid ghid ghid"
+        "popularitate popularitate sfat-zilei sfat-zilei"
+        "resurse-externe resurse-externe resurse-externe resurse-externe";
+        
     }
 }
 
 @media screen and (max-width:800px) {
     #grid-pagina {
         display: grid; 
+        gap: 15px;
         grid-template-columns: 1fr; 
         grid-template-areas: 
             "welcome"
@@ -338,11 +376,13 @@ iframe {
             "statistici"
             "despre-site-server"
             "produse"
+            "fig1"
+            "fig2"
+            "fig3"
+            "fig4"
             "promotii"
             "index-intrebari"
-            "informative-videos"
-            "dictionar"
-            "galerie-statica";
+            "galerie";
     }
     
     html {
@@ -356,6 +396,10 @@ iframe {
     
     body {
         --margine-pagina: 10px;
+        --gap-pagina: 15px; 
+        --padding-zona: 8px;  
+        --media-max-width: 480px; 
+        --media-min-width: 120px;
     }
 
     header.header-principal h1 {
@@ -397,24 +441,13 @@ header.header-principal img {
 
 .testimoniale {
   margin: 20px 0;
-  padding: 15px;
+  padding: 10px;
   background: var(--culoare-detalii);
   border-radius: 8px;
 }
+#resurse-externe img {
+    width: 30%; 
+    max-width: 250px; 
+    margin: 0 auto; 
+}
 
-@media screen and (max-width:1200px) {
-    .tabel-container {
-        overflow-x: auto;
-    }
-    #tab-orar {
-        min-width: 600px;
-    }
-}
-@media screen and (max-width:800px) {
-    .tabel-container {
-        overflow-x: auto;
-    }
-    #tab-orar {
-        min-width: 600px;
-    }
-}

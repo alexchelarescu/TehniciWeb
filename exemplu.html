@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="ro">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Irina Ciocan">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
-        <meta name="keywords" content="cofetarie, Dulcelind, cofetaria Dulcelind, prajituri, torturi, dulce, pateuri, produse">
-        <title>Cofetăria Dulcelind</title>
-        <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
-		
-        <link rel="stylesheet"  href="./resurse/css/general.css" type="text/css"  />
-        <link rel="stylesheet" href="./resurse/css/general1000.css" type="text/css" media="screen and (max-width:1000px)"/>
-        <link rel="stylesheet" href="./resurse/css/general700.css" type="text/css" media="screen and (max-width:700px)"/>
-        <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
-        
-        <link rel="stylesheet" href="./resurse/css/nav1000.css" type="text/css" media="screen and (max-width:1000px)"/>
-        
-        <link rel="stylesheet" href="./resurse/css/nav700.css" type="text/css" media="screen and (max-width:700px)"/>
-        <link rel="stylesheet"  href="./resurse/css/galerie-statica.css" type="text/css"  />
-        <link rel="stylesheet"  href="./resurse/css/galerie-statica-500.css" type="text/css" media="screen and (max-width:500px)"  />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Eater&family=Madimi+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Cofetăria Dulcelind</title>
+    <meta name="author" content="Irina Ciocan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="cofetarie, Dulcelind, cofetaria Dulcelind, prajituri, torturi, dulce, pateuri, produse">
+    <link rel="icon" type="image/png" href="/resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/resurse/imagini/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/resurse/imagini/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/resurse/imagini/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/resurse/imagini/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="/resurse/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="/resurse/css/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/resurse/css/nav1000.css" type="text/css" media="screen and (max-width: 1000px)" />
+    <link rel="stylesheet" href="/resurse/css/nav700.css" type="text/css" media="screen and (max-width: 700px)" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonbon&display=swap" rel="stylesheet">
+</head>
+
+<body>
 
     <nav>
             
         <label id="hamburger" for="ch-menu">
-            <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">    
+            <img src="/resurse/imagini/Hamburger_icon_alb.png" alt="menu">    
         </label>
         <input type="checkbox" id="ch-menu"/>
         <ul class="meniu">
@@ -57,8 +54,8 @@
             
             </li>
             <li>
-                <div class="text-icon"><a href="#">Inregistrare</a></div>
-                <div class="imag-icon" ><span class="fas fa-solid fa-book"></span></div></li>
+                <a href="#"><div class="text-icon">Inregistrare</div> <div class="imag-icon" ><span class="fas fa-solid fa-book"></span></div></a>
+            </li>
             <li><div>Despre</div>
                 <ul>                        
                     <li><a href="despre.html#prezentare">Prezentare</a></li>
@@ -79,11 +76,9 @@
             <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
-    <section id="test">
-     <header class="c1" id="titlu" >
-        <h1 id="t">Cofetaria <span>Dulcelind</span></h1>
+    <header class="c1" id="titlu" >
+        <h1 id="t" class="bonbon-regular">Cofetaria <span>Dulcelind</span> <i class="fa-solid fa-cake-candles fa-bounce"></i></h1>
     </header>
-    </section>
     <main> <!--  comentariu -->
         <div id="grid-pagina">
 
@@ -101,21 +96,21 @@
                     <div id="dv-prezentare">
                     <picture>
                         <!-- il ia pe primul care se potriveste cu query-ul din media-->
-                        <source srcset="./resurse/imagini/macarons-200x200.jpg" media="(max-width:700px)"/>
-                        <source srcset="./resurse/imagini/macarons.jpg" media="(max-width:1200px)"/>
-                        <img src="./resurse/imagini/macarons-640x360.jpg" alt="text"/>
+                        <source srcset="/resurse/imagini/macarons-200x200.jpg" media="(max-width:700px)"/>
+                        <source srcset="/resurse/imagini/macarons.jpg" media="(max-width:1200px)"/>
+                        <img src="/resurse/imagini/macarons-640x360.jpg" alt="text"/>
                     </picture>
                 </div>
             </div>
             <hr class="prajituri"/>
             <div id="container-video">
-                <img style="width:50%" class="farfurie" src="resurse/imagini/farfurie-flori-albastre.png" alt="farfurie" title="O farfurie cu flori">
+                <img style="width:50%" class="farfurie" src="/resurse/imagini/farfurie-flori-albastre.png" alt="farfurie" title="O farfurie cu flori">
                 <div id="centrare-video">
                     <div id="clip-video">
                         <div id="stil-video">
                             <video width="320" height="240"  playsinline autoplay loop muted>
-                                <source src="resurse/video/Chocolate.mp4" type="video/mp4">
-                                <source src="resurse/video/Chocolate.ogv" type="video/ogv">
+                                <source src="/resurse/video/Chocolate.mp4" type="video/mp4">
+                                <source src="/resurse/video/Chocolate.ogv" type="video/ogv">
                                 <track default src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo=" kind="captions" srclang="ro" label="romana">
                                 <track src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo=" kind="captions" srclang="en" label="engleza">
                             </video>
@@ -225,7 +220,7 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td rowspan="5" class="exceptie-tabel">Zile<br/>Lucrătoare</td>
                             <td>Luni</td>
                             <td>10-12</td>
                             <td>12-14</td>
@@ -265,7 +260,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td rowspan="2">Weekend</td>
+                            <td rowspan="2" class="exceptie-tabel">Weekend</td>
                             <td>Sambata</td>
                             <td>10-12</td>
                             <td>12-13</td>
@@ -288,21 +283,18 @@
                 <p><strong>Atentie!!!</strong> in prima zi a lunii facem inventar.</p>
             </section>
             <figure id="fig1" class="fg-img">
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose 1</figcaption>
             </figure>
             <figure id="fig2" class="fg-img">
-            <img src="resurse/imagini/briose-frisca.png" alt="briose">
+            <img src="/resurse/imagini/briose-frisca.png" alt="briose">
             <figcaption>Briose 2</figcaption>
             </figure>
             <figure  id="fig3" class="fg-img">
-            <img src="resurse/imagini/briose-frisca.png" alt="briose">
+            <img src="/resurse/imagini/briose-frisca.png" alt="briose">
             <figcaption>Briose 3</figcaption>
             </figure>
-            <figure  id="fig4">
-            <img src="resurse/imagini/briose-frisca.png" alt="briose">
-            <figcaption>Briose 3</figcaption>
-            </figure>
+
             <section id="anunturi">
                 <h2 class="fg-img">Anunțuri</h2>
                 <p><time datetime="2025-07-20">20 iulie 2025</time>Nu avem nimic de anuntat, doar a trecut ceva vreme de la ultimul anunț și ne-am gândit să mai scriem ceva pe aici.</p>
@@ -340,32 +332,32 @@
             <div id="grid-galerie">
                 <figure>
                     <div>
-                        <img src="resurse/imagini/briose-frisca.png" alt="briose"></div>
+                        <img src="/resurse/imagini/briose-frisca.png" alt="briose"></div>
                 
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
                 <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <img src="/resurse/imagini/briose-frisca.png" alt="briose">
                 <figcaption>Briose</figcaption>
                 </figure>
             
@@ -400,6 +392,6 @@
             1&lt;2&copy;
 		</address>
     </footer>
+</body>
 
-    </body>
 </html>

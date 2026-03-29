@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="/resurse/css/nav.css" type="text/css" />
   <link rel="stylesheet" href="/resurse/css/nav1000.css" type="text/css" media="screen and (min-width:1000px)" />
   <link rel="stylesheet" href="/resurse/css/nav700.css" type="text/css" media="screen and (max-width:700px)" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 
 <body>
@@ -31,24 +35,25 @@
         </label>
         <input type="checkbox" id="ch-menu"/>
       <ul class="meniu">
-        <li><a href="#welcome">ACASĂ</a>
+        <li><a href="#welcome"><i class="fa-solid fa-house" aria-hidden="true"></i> ACASĂ</a>
           <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#promotii">Promoții</a></li>
-            <li><a href="#anunturi">Anunțuri</a></li>
-            <li><a href="#popularitate">Popularitate</a></li>
+            <li><a href="#welcome"><i class="fa-solid fa-door-open" aria-hidden="true"></i> Welcome</a></li>
+            <li><a href="#promotii"><i class="fa-solid fa-tags" aria-hidden="true"></i> Promoții</a></li>
+            <li><a href="#anunturi"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i> Anunțuri</a></li>
+            <li><a href="#popularitate"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Popularitate</a></li>
           </ul>
         </li>
-        <li><a href="#produse">PRODUSE</a>
+        <li><a href="#produse"><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> PRODUSE</a>
           <ul>
-            <li><a href="#produse">Toate produsele</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#ghid">Ghid olfactiv</a></li>
+            <li><a href="#produse"><i class="fa-solid fa-box-open" aria-hidden="true"></i> Toate produsele</a></li>
+            <li><a href="#galerie"><i class="fa-solid fa-image" aria-hidden="true"></i> Galerie</a></li>
+            <li><a href="#ghid"><i class="fa-solid fa-book" aria-hidden="true"></i> Ghid olfactiv</a></li>
           </ul>
         </li>
-        <li><a href="#orar">ORAR</a></li>
-        <li><a href="#index-intrebari">ÎNTREBĂRI</a></li>
-        <li><a href="#resurse-externe">RESURSE</a></li>
+        <li><a href="#orar"><i class="fa-solid fa-clock" aria-hidden="true"></i> ORAR</a></li>
+        <li><a href="#index-intrebari"><i class="fa-solid fa-question-circle" aria-hidden="true"></i> ÎNTREBĂRI</a></li>
+        <li><a href="#resurse-externe"><i class="fa-solid fa-link" aria-hidden="true"></i> RESURSE</a></li>
+        <li><a href="#contact"><i class="fa-regular fa-envelope" aria-hidden="true"></i> CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -80,25 +85,6 @@
         </div>
         <p class="anunt intro">Puteți explora colecțiile noastre atât în boutique-ul nostru din București, cât și
           online, cu livrare rapidă prin curier în toată România.</p>
-        <hr class="prajituri" />
-        <div id="container-video">
-          <div id="centrare-video">
-            <div id="clip-video">
-              <div id="stil-video">
-                <video width="320" height="240" playsinline autoplay loop muted>
-                  <source src="resurse/video/Chocolate.mp4" type="video/mp4">
-                  <source src="resurse/video/Chocolate.ogv" type="video/ogv">
-                  <track default
-                    src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo="
-                    kind="captions" srclang="ro" label="romana">
-                  <track
-                    src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo="
-                    kind="captions" srclang="en" label="engleza">
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <section id="promotii">
         <h2>Promoții și oferte</h2>
@@ -289,7 +275,6 @@
               </tfoot>
             </table>
         </div> </section>
-        <p><strong>Atenție!</strong> În prima zi a lunii organizăm sesiuni exclusive de testare a noilor colecții.</p>
       </section>
       <figure id="fig1" class="fg-img">
         <img src="resurse/imagini/noname_13-perfume-2142817_1920 (1).jpg" alt="parfum floral"
@@ -407,23 +392,6 @@
       </section>
 
     </div>
-    <section id="galerie-statica">
-      <h2>Galerie</h2>
-      <div id="grid-galerie">
-        <figure>
-          <div>
-            <img src="resurse/imagini/mwkum9772-perfume-6013027_1920 (2).jpg" alt="parfum de nișă">
-          </div>
-          <figcaption>Parfum de nișă</figcaption>
-        </figure>
-        <figure>
-          <div>
-            <img src="resurse/imagini/dcwilliams-serum-7675105_1920 (1).jpg" alt="parfum de nișă">
-          </div>
-          <figcaption>Parfum de nișă</figcaption>
-        </figure>
-      </div>
-    </section>
     <section id="ghid">
       <h2>Ghid olfactiv</h2>
       <p>Dacă doriți să înțelegeți mai bine lumea parfumurilor de nișă și să învățați cum se construiește o compoziție
@@ -450,7 +418,7 @@
     </section>
 
   </main>
-  <footer>
+  <footer id="contact">
     <a href="#" id="buton-sus" title="Revino la începutul paginii" aria-label="Spre începutul paginii">
     <span class="sageata-sus">&#129081;</span>
 </a>

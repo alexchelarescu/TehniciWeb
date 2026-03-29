@@ -64,10 +64,6 @@ ul.meniu li{
     color: black;
     text-align: center;
     line-height: var(--inaltime-buton);
-    /* text-decoration: none; */
-    /* border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px; */
-    /* margin-right: 10px; */
     transition: all 0.1s linear;
     font-weight: bold;
 }
