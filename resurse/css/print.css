@@ -1,0 +1,130 @@
+@media print {
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        position: relative;
+        color: var(--culoare-text) !important;
+        background-color: #fff !important;
+    }
+
+    #banner-print {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        margin: 0;
+        padding: 0.25cm 0;
+        text-align: center;
+        border: 2px dotted #000;
+        background-color: #fff;
+        font-weight: 600;
+        z-index: 9999;
+    }
+
+    #buton-sus,
+    img,
+    video,
+    audio,
+    iframe,
+    svg,
+    canvas,
+    picture,
+    source,
+    figure,
+    figcaption,
+    .container-iframe,
+    .taburi-iframe {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        display: block !important;
+    }
+
+    #grid-pagina>* {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    a,
+    a:visited {
+        color: var(--culoare-text) !important;
+        text-decoration: none !important;
+    }
+
+    nav,
+    #hamburger,
+    #ch-menu {
+        display: none !important;
+    }
+
+    header.header-principal {
+        min-height: 100vh;
+        margin: 0;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: none !important;
+        box-shadow: none !important;
+        background-color: #fff !important;
+        break-after: page;
+        page-break-after: always;
+    }
+
+    header.header-principal>* {
+        display: none !important;
+    }
+
+    header.header-principal>h1 {
+        display: block !important;
+        margin: 0;
+        line-height: 1.2;
+        text-decoration: underline;
+        font-size: calc(2.5 * 1rem) !important;
+    }
+
+    #contact {
+        break-before: page;
+        page-break-before: always;
+    }
+
+    body::after {
+        content: "Chelarescu Alexandru";
+        position: fixed;
+        right: 0.5cm;
+        bottom: 0.5cm;
+        width: 100px;
+        height: 2cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 3px double #000;
+        opacity: 0.65;
+        font-size: 10pt;
+        color: #000;
+        background-color: transparent;
+        pointer-events: none;
+        z-index: 9999;
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+}
+
+@page: left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+}
+
+@page: right {
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+}

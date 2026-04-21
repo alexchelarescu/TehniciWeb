@@ -1,0 +1,25 @@
+{
+  "cale_galerie": "resurse/imagini",
+  "imagini": [
+    {
+      "fisier": "noname_13-perfume-2142817_1920 (1).jpg",
+      "descriere": "Parfum floral",
+      "luni": ["martie", "aprilie", "mai", "iunie", "iulie"]
+    },
+    {
+      "fisier": "sponchia-fragrance-3619762_1920 (2).jpg",
+      "descriere": "Parfum lemnos",
+      "luni": ["septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "fisier": "nad_dyagileva-perfume-2445617_1920 (1).jpg",
+      "descriere": "Parfum oriental",
+      "luni": ["octombrie", "noiembrie", "decembrie", "ianuarie"]
+    },
+    {
+      "fisier": "nad_dyagileva-perfume-2445617_1920 (1).jpg",
+      "descriere": "Parfum unisex",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august"]
+    }
+  ]
+}

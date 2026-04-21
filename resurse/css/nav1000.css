@@ -1,3 +1,19 @@
-.text-icon{
-    display: none;
+ul.meniu > li {
+width: 90px;
+height: 44px;
+line-height: 44px;
+}
+
+ul.meniu > li > a {
+font-size: 0;
+text-align: center;
+}
+
+ul.meniu > li > a i {
+font-size: 1.1rem;
+margin: 0;
+}
+
+ul.meniu ul li > a {
+font-size: 0.85rem;
 }

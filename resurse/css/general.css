@@ -1,22 +1,39 @@
 html {
-    font-size: 18px; 
+    font-size: 18px;
     transition: font-size 0.5s ease;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-p, li, td, th { font-size: 1rem; }
-.subtitlu { font-size: 0.9rem; }
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p,
+li,
+td,
+th {
+    font-size: 1rem;
+}
+
+.subtitlu {
+    font-size: 0.9rem;
+}
 
 body {
-    --culoare-fundal: #FDFBF9;    
-    --culoare-text: #2B2321;     
-    --culoare-contur: #E1C6B8;    
+    --culoare-fundal: #FDFBF9;
+    --culoare-text: #2B2321;
+    --culoare-contur: #E1C6B8;
     --culoare-highlight: #C29D89;
     --culoare-detalii: #EFE6E1;
 
-    
+
     font-size: 18px;
     line-height: 1.5;
     --margine-pagina: 100px;
@@ -41,7 +58,7 @@ p {
     display: grid;
     gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:    
+    grid-template-areas:
         "welcome welcome welcome welcome"
         "lista-utilizatori-online statistici statistici despre-site-server"
         "calendar-evenimente calendar-evenimente orar orar"
@@ -57,7 +74,9 @@ p {
         "resurse-externe resurse-externe resurse-externe resurse-externe";
 }
 
-#grid-pagina > *, header, footer {
+#grid-pagina>*,
+header,
+footer {
     border: 1px solid var(--culoare-contur);
     box-shadow: 5px 5px 5px var(--culoare-contur);
     border-radius: 12px;
@@ -66,12 +85,12 @@ p {
     min-width: 0;
 }
 
-figure { 
-    margin: 0; 
+figure {
+    margin: 0;
 }
 
-figure > img { 
-    width: 100%; 
+figure>img {
+    width: 100%;
 }
 
 img {
@@ -84,14 +103,14 @@ iframe {
 }
 
 .oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #welcome {
-    grid-area: welcome; 
+    grid-area: welcome;
 }
 
 #ghid {
@@ -101,87 +120,105 @@ iframe {
 #promotii {
     grid-area: promotii;
 }
+
 #anunturi {
     grid-area: anunturi;
 }
+
 #orar {
     grid-area: orar;
 }
+
 #produse {
     grid-area: produse;
 }
+
 #index-intrebari {
     grid-area: index-intrebari;
 }
+
 #lista-utilizatori-online {
     grid-area: lista-utilizatori-online;
 }
+
 #statistici {
     grid-area: statistici;
 }
+
 #despre-site-server {
     grid-area: despre-site-server;
 }
+
 #calendar-evenimente {
     grid-area: calendar-evenimente;
 }
-#reduceri { 
+
+#reduceri {
     grid-area: reduceri;
- }
+}
+
 #dictionar {
-     grid-area: dictionar;
-     }
+    grid-area: dictionar;
+}
+
 #popularitate {
-     grid-area: popularitate;
-     }
+    grid-area: popularitate;
+}
+
 #sfat-zilei {
-     grid-area: sfat-zilei;
-     }
+    grid-area: sfat-zilei;
+}
+
 #resurse-externe {
-     grid-area: resurse-externe; 
-    }
-#fig1 { 
+    grid-area: resurse-externe;
+}
+
+#fig1 {
     grid-area: fig1;
- }
-#fig2 { 
+}
+
+#fig2 {
     grid-area: fig2;
- }
+}
+
 #fig3 {
-     grid-area: fig3;
-     }
+    grid-area: fig3;
+}
+
 #fig4 {
-     grid-area: fig4;
-     }
+    grid-area: fig4;
+}
+
 .container-iframe {
     display: flex;
-    flex-direction: column; 
-    align-items: flex-end;       
+    flex-direction: column;
+    align-items: flex-end;
     width: 100%;
     max-width: 600px;
-    gap: 0;                      
+    gap: 0;
 }
 
 .container-iframe iframe {
-    width: 100%;   
-    max-width: 800px; 
-    height: 420px;    
-    border-radius: 12px; 
+    width: 100%;
+    max-width: 800px;
+    height: 420px;
+    border-radius: 12px;
     border: 1px solid var(--culoare-contur);
-    margin-bottom: 0;          
+    margin-bottom: 0;
 }
 
 .taburi-iframe {
     display: flex;
-    flex-direction: row; 
-    justify-content: flex-end;  
-    gap: 8px;                    
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
     width: 100%;
 }
 
-.taburi-iframe > a {
-    display: flex;   
-    font-size: 0.80rem;     
-    border-radius: 0 0 10px 10px; 
+.taburi-iframe>a {
+    display: flex;
+    font-size: 0.80rem;
+    border-radius: 0 0 10px 10px;
     background-color: var(--culoare-fundal);
     border: 1px solid var(--culoare-contur);
     color: var(--culoare-text);
@@ -190,17 +227,17 @@ iframe {
     transition: all 0.25s ease-in-out;
 
     border: 1px solid var(--culoare-contur);
-    box-shadow: 
-        inset 2px 2px 2px var(--culoare-contur),    
-        inset 2px -3px 2px var(--culoare-contur),   
-        inset 2px 2px 2px var(--culoare-contur),   
+    box-shadow:
+        inset 2px 2px 2px var(--culoare-contur),
+        inset 2px -3px 2px var(--culoare-contur),
+        inset 2px 2px 2px var(--culoare-contur),
         inset -2px 2px 2px var(--culoare-contur);
     border-radius: 12px;
     background-color: var(--culoare-fundal);
     padding: 10px;
 }
 
-.taburi-iframe > a:hover { 
+.taburi-iframe>a:hover {
     background-color: var(--culoare-contur);
     color: var(--culoare-fundal);
 }
@@ -214,11 +251,7 @@ iframe {
     margin: 20px 0;
 }
 
-#tab-orar {
-    width: 100%;
-    border-collapse: collapse; 
-    background-color: transparent; 
-}
+
 
 #tab-orar caption {
     caption-side: bottom;
@@ -227,13 +260,13 @@ iframe {
     color: var(--culoare-text);
 }
 
-#tab-orar td, 
+#tab-orar td,
 #tab-orar th {
     border: 1px solid var(--culoare-contur);
     text-align: center;
     padding: 10px;
     background-color: transparent;
-    
+
     transition: font-size 0.75s ease, background-color 0.75s ease;
 }
 
@@ -247,29 +280,29 @@ iframe {
 #tab-orar thead th {
     border: 3px solid var(--culoare-contur);
     font-weight: bold;
-    
+
 }
 
 
 #tab-orar tbody tr:nth-child(even) {
-    
-    box-shadow: inset 0 0 10px rgba(194, 157, 137, 0.3); 
-    color: var(--culoare-text); 
+
+    box-shadow: inset 0 0 10px rgba(194, 157, 137, 0.3);
+    color: var(--culoare-text);
 }
 
 
 #tab-orar tbody tr:nth-child(odd) {
-    box-shadow: inset 0 0 10px rgba(43, 35, 33, 0.15); 
-    color: #555555; 
+    box-shadow: inset 0 0 10px rgba(43, 35, 33, 0.15);
+    color: #555555;
 }
 
 
 #tab-orar tbody tr:hover td {
-    background-color: var(--culoare-highlight); 
+    background-color: var(--culoare-highlight);
     color: var(--culoare-fundal);
-    
-   
-    font-size: 120%; 
+
+
+    font-size: 120%;
 }
 
 /* Stilizare link-top */
@@ -283,23 +316,23 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 52px;
-    height: 64px; 
+    height: 64px;
     text-decoration: none;
 
     background-color: #FDFBF9;
-    border: 3px solid #E1C6B8; 
+    border: 3px solid #E1C6B8;
     opacity: 0.65;
 
     border-radius: 26px 26px 0 0;
 
     box-shadow: inset 0 0 16px rgba(225, 198, 184, 0.4);
 
-    transition: opacity 0.4s ease, 
-                background-color 0.4s ease, 
-                box-shadow 0.4s ease, 
-                border-color 0.4s ease;
+    transition: opacity 0.4s ease,
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
 }
 
 /* Starea de hover a arcadei */
@@ -316,58 +349,98 @@ iframe {
     font-size: 50px;
     font-weight: bold;
     display: block;
-    
-    margin-top: 4px; 
+
+    margin-top: 4px;
     transform: scale(1);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                color 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        color 0.4s ease;
 }
 
 /* Scalarea săgeții */
 #buton-sus:hover .sageata-sus {
     transform: scale(1.35);
-    color: #FDFBF9; 
+    color: #FDFBF9;
 }
 
 @media screen and (max-width:1200px) {
     html {
-        font-size: 17px; 
+        font-size: 17px;
     }
 
     body {
         --margine-pagina: 20px;
         --gap-pagina: 20px;
         --padding-zona: 10px;
-        --media-max-width: 700px; } 
+        --media-max-width: 700px;
+    }
 
     #grid-pagina {
         display: grid;
         gap: 20px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:    
-        "welcome welcome welcome welcome"
-        "lista-utilizatori-online statistici statistici despre-site-server"
-        "calendar-evenimente calendar-evenimente orar orar"
-        "anunturi anunturi orar orar"
-        "produse produse produse produse"
-        "fig1 fig2 fig3 fig4"
-        "promotii promotii promotii promotii"
-        "index-intrebari index-intrebari index-intrebari index-intrebari"
-        "galerie galerie galerie galerie"
-        "reduceri reduceri reduceri reduceri"
-        "ghid ghid ghid ghid"
-        "popularitate popularitate sfat-zilei sfat-zilei"
-        "resurse-externe resurse-externe resurse-externe resurse-externe";
-        
+        grid-template-areas:
+            "welcome welcome welcome welcome"
+            "lista-utilizatori-online statistici statistici despre-site-server"
+            "calendar-evenimente calendar-evenimente orar orar"
+            "anunturi anunturi orar orar"
+            "produse produse produse produse"
+            "fig1 fig2 fig3 fig4"
+            "promotii promotii promotii promotii"
+            "index-intrebari index-intrebari index-intrebari index-intrebari"
+            "galerie galerie galerie galerie"
+            "reduceri reduceri reduceri reduceri"
+            "ghid ghid ghid ghid"
+            "popularitate popularitate sfat-zilei sfat-zilei"
+            "resurse-externe resurse-externe resurse-externe resurse-externe";
+
     }
+}
+.cta a {
+    color: var(--culoare-highlight);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.testimoniale {
+    margin: 20px 0;
+    padding: 10px;
+    background: var(--culoare-detalii);
+    border-radius: 8px;
+}
+
+#resurse-externe img {
+    width: 30%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+header.header-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header.header-principal h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+header.header-principal img {
+    width: 256px;
+    height: auto;
+    max-width: 256px;
 }
 
 @media screen and (max-width:800px) {
     #grid-pagina {
-        display: grid; 
+        display: grid;
         gap: 15px;
-        grid-template-columns: 1fr; 
-        grid-template-areas: 
+        grid-template-columns: 1fr;
+        grid-template-areas:
             "welcome"
             "orar"
             "calendar-evenimente"
@@ -382,72 +455,50 @@ iframe {
             "fig4"
             "promotii"
             "index-intrebari"
-            "galerie";
+            "galerie"
+            "popularitate"
+            "sfat-zilei"
+            "resurse-externe"
+            "ghid";
     }
-    
+
     html {
-        font-size: 15px; 
+        font-size: 15px;
     }
-    
+
     body * {
         transition: none !important;
         animation: none !important;
     }
-    
+
     body {
         --margine-pagina: 10px;
-        --gap-pagina: 15px; 
-        --padding-zona: 8px;  
-        --media-max-width: 480px; 
+        --gap-pagina: 15px;
+        --padding-zona: 8px;
+        --media-max-width: 480px;
         --media-min-width: 120px;
     }
 
+    header.header-principal {
+        gap: 8px;
+        padding: 8px 0;
+    }
+
     header.header-principal h1 {
-        font-size: 25px;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.1;
+        margin: 0;
     }
 
-    header.header-principal img {
-        width: 20px;
-        max-height: 30px;
+    header.header-principal > img {
+        width: clamp(110px, 34vw, 160px);
+        max-width: 100%;
+        max-height: none;
+        height: auto;
+        object-fit: contain;
     }
 }
 
-header.header-principal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;      
-  justify-content: center;  
-  gap: 10px;              
-  padding: 10px 0;        
-  text-align: center;
+#banner-print {
+display: none;
 }
-
-header.header-principal h1 {
-    font-size: 70px;
-    margin: 0;
-}
-
-header.header-principal img {
-    width: 256px;  
-    height: auto;
-    max-width: 256px;
-}
-
-.cta a {
-  color: var(--culoare-highlight);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.testimoniale {
-  margin: 20px 0;
-  padding: 10px;
-  background: var(--culoare-detalii);
-  border-radius: 8px;
-}
-#resurse-externe img {
-    width: 30%; 
-    max-width: 250px; 
-    margin: 0 auto; 
-}
-
