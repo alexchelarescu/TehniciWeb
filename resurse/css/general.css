@@ -102,6 +102,51 @@ iframe {
     width: 100%;
 }
 
+math.formula-math {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.25rem 0.6rem;
+    margin-left: 0.35rem;
+    border-radius: 0.75rem;
+    background-color: var(--culoare-detalii);
+    border: 1px solid var(--culoare-contur);
+    font-size: 1.05rem;
+}
+
+math.formula-math .formula-variable {
+    color: #7b4d36;
+    font-weight: 700;
+    font-style: italic;
+}
+
+math.formula-math .formula-operator {
+    color: #5d4a44;
+    font-weight: 700;
+}
+
+math.formula-math .formula-number {
+    color: #225c52;
+    font-weight: 700;
+}
+
+math.formula-math .formula-percent {
+    color: #94604b;
+    font-weight: 700;
+}
+
+math.formula-math .formula-label {
+    color: #5d4a44;
+    font-size: 0.88em;
+    font-style: normal;
+    font-weight: 600;
+}
+
+math.formula-math .formula-fraction-top,
+math.formula-math .formula-fraction-bottom {
+    padding: 0 0.15rem;
+}
+
 .oswald {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;

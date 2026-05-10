@@ -44,6 +44,7 @@ ul.meniu>li {
     width: 100%;
     position: relative;
     height: auto;
+    transition: background-color 0.1s linear !important;
 }
 
 ul.meniu>li>a {
@@ -57,6 +58,7 @@ ul.meniu>li>a {
     box-sizing: border-box;
     text-align: center;
     text-shadow: none !important;
+    transition: none !important;
 }
 
 ul.meniu>li:hover>a {

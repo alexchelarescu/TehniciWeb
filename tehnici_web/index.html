@@ -19,36 +19,41 @@
   <link rel="stylesheet" href="/resurse/css/nav.css" type="text/css" />
   <link rel="stylesheet" href="/resurse/css/nav1000.css" type="text/css" media="screen and (min-width:1000px)" />
   <link rel="stylesheet" href="/resurse/css/nav700.css" type="text/css" media="screen and (max-width:700px)" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 
 <body>
-  <header>
-    <h1>Olfacto</h1>
-    <img src="sigla.png" alt="sigla Olfacto" />
+  <header class="header-principal">
+  <h1>Olfacto</h1>
+    <img src="resurse/imagini/sigla.png" alt="sigla Olfacto" />
     <nav>
        <label id="hamburger" for="ch-menu">
             <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">    
         </label>
         <input type="checkbox" id="ch-menu"/>
       <ul class="meniu">
-        <li><a href="#welcome">ACASĂ</a>
+        <li><a href="#welcome"><i class="fa-solid fa-house" aria-hidden="true"></i> ACASĂ</a>
           <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#promotii">Promoții</a></li>
-            <li><a href="#anunturi">Anunțuri</a></li>
-            <li><a href="#popularitate">Popularitate</a></li>
+            <li><a href="#welcome"><i class="fa-solid fa-door-open" aria-hidden="true"></i> Welcome</a></li>
+            <li><a href="#promotii"><i class="fa-solid fa-tags" aria-hidden="true"></i> Promoții</a></li>
+            <li><a href="#anunturi"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i> Anunțuri</a></li>
+            <li><a href="#popularitate"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Popularitate</a></li>
           </ul>
         </li>
-        <li><a href="#produse">PRODUSE</a>
+        <li><a href="#produse"><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> PRODUSE</a>
           <ul>
-            <li><a href="#produse">Toate produsele</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#ghid">Ghid olfactiv</a></li>
+            <li><a href="#produse"><i class="fa-solid fa-box-open" aria-hidden="true"></i> Toate produsele</a></li>
+            <li><a href="#galerie"><i class="fa-solid fa-image" aria-hidden="true"></i> Galerie</a></li>
+            <li><a href="#ghid"><i class="fa-solid fa-book" aria-hidden="true"></i> Ghid olfactiv</a></li>
           </ul>
         </li>
-        <li><a href="#orar">ORAR</a></li>
-        <li><a href="#index-intrebari">ÎNTREBĂRI</a></li>
-        <li><a href="#resurse-externe">RESURSE</a></li>
+        <li><a href="#orar"><i class="fa-solid fa-clock" aria-hidden="true"></i> ORAR</a></li>
+        <li><a href="#index-intrebari"><i class="fa-solid fa-question-circle" aria-hidden="true"></i> ÎNTREBĂRI</a></li>
+        <li><a href="#resurse-externe"><i class="fa-solid fa-link" aria-hidden="true"></i> RESURSE</a></li>
+        <li><a href="#contact"><i class="fa-regular fa-envelope" aria-hidden="true"></i> CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -69,47 +74,17 @@
         <p class="intro">Vă mulțumim pentru vizită. Descoperiți universul <dfn
             title="Parfumuri de nișă sunt produse create de case independente de parfumerie, cu ingrediente rare și limitate.">parfumurilor
             de nișă</dfn>, unde fiecare produs spune o poveste unică.</p>
+        <p class="intro-extins">La Olfacto, credem că fiecare parfum spune o poveste unică. Fondat în 2026, boutique-ul nostru aduce cele mai rafinate creații din lume, de la case independente până la branduri de lux.</p>
 
         <div class="intro-oferte">
-          <div>Parfumuri pentru femei</div>
-          <div>Parfumuri pentru bărbați</div>
-          <div>Parfumuri unisex</div>
-          <div>Seturi cadou</div>
-          <div>Mostre și discovery sets</div>
+          <div><strong>Parfumuri pentru femei</strong> — Eleganță florală și orientală</div>
+          <div><strong>Parfumuri pentru bărbați</strong> — Note lemnoase și condimentate</div>
+          <div><strong>Parfumuri unisex</strong> — Fără limite de gen</div>
+          <div><strong>Seturi cadou</strong> — Perfecte pentru orice ocazie</div>
+          <div><strong>Mostre și discovery sets</strong> — Descoperă noi arome</div>
         </div>
         <p class="anunt intro">Puteți explora colecțiile noastre atât în boutique-ul nostru din București, cât și
           online, cu livrare rapidă prin curier în toată România.</p>
-        <div id="dv-prezentare-1">
-          <div id="dv-prezentare">
-            <picture>
-              <!-- il ia pe primul care se potriveste cu query-ul din media-->
-              <source srcset="/resurse/imagini/macarons-200x200.jpg" media="(max-width:700px)" />
-              <source srcset="/resurse/imagini/macarons.jpg" media="(max-width:1200px)" />
-              <img src="/resurse/imagini/colectie.jpg" alt="colecție parfumuri de nișă" />
-            </picture>
-          </div>
-        </div>
-        <hr class="prajituri" />
-        <div id="container-video">
-          <img style="width:50%" class="farfurie" src="/resurse/imagini/Adobe Express - file1.jpg" alt="flacon parfum"
-            title="Un flacon elegant de parfum">
-          <div id="centrare-video">
-            <div id="clip-video">
-              <div id="stil-video">
-                <video width="320" height="240" playsinline autoplay loop muted>
-                  <source src="resurse/video/Chocolate.mp4" type="video/mp4">
-                  <source src="resurse/video/Chocolate.ogv" type="video/ogv">
-                  <track default
-                    src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo="
-                    kind="captions" srclang="ro" label="romana">
-                  <track
-                    src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo="
-                    kind="captions" srclang="en" label="engleza">
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <section id="promotii">
         <h2>Promoții și oferte</h2>
@@ -226,84 +201,80 @@
       </section>
       <section id="orar">
         <h2>Orar</h2>
+        
         <div class="tabel-container">
-          <table id="tab-orar">
-            <caption>Program de funcționare Olfacto</caption>
-            <thead>
-
-              <tr>
-                <th>Cod</th>
-                <th>Perioadă</th>
-                <th>Zi</th>
-                <th>Interval dimineață</th>
-                <th>Pauza de masă</th>
-                <th>Interval seară</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td rowspan="5">Zile<br />Lucrătoare</td>
-                <td>Luni</td>
-                <td>10-12</td>
-                <td>12-14</td>
-                <td>14-20</td>
-              </tr>
-              <tr>
-                <td></td>
-
-                <td>Marți</td>
-                <td>9-12</td>
-                <td>12-14</td>
-                <td>14-21</td>
-              </tr>
-              <tr>
-                <td></td>
-
-                <td>Miercuri</td>
-                <td>9-11</td>
-                <td>11-13</td>
-                <td>14-21</td>
-              </tr>
-              <tr>
-                <td></td>
-
-                <td>Joi</td>
-                <td>9-11</td>
-                <td>11-13</td>
-                <td>14-21</td>
-              </tr>
-              <tr>
-                <td></td>
-
-                <td>Vineri</td>
-                <td>9-12</td>
-                <td>12-14</td>
-                <td>14-19</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td rowspan="2">Weekend</td>
-                <td>Sâmbătă</td>
-                <td>10-12</td>
-                <td>12-13</td>
-                <td>13-16</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Duminică</td>
-                <td>10-14</td>
-                <td>-</td>
-                <td>închis</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">Închis cu ocazia sărbătorilor legale. Pentru comenzi online, livrăm în toată România.</td>
-            </tr>
-          </tfoot>
-        </table>
-        <p><strong>Atenție!</strong> În prima zi a lunii organizăm sesiuni exclusive de testare a noilor colecții.</p>
+            <table id="tab-orar">
+              <caption>Programul de funcționare al boutique-ului Olfacto</caption>
+              <thead>
+                <tr>
+                  <th>Cod</th>
+                  <th>Perioadă</th>
+                  <th>Zi</th>
+                  <th>Interval dimineață</th>
+                  <th>Pauza de masă</th>
+                  <th>Interval seară</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td rowspan="5">Zile<br />Lucrătoare</td>
+                  <td>Luni</td>
+                  <td>10-12</td>
+                  <td>12-14</td>
+                  <td>14-20</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Marți</td>
+                  <td>9-12</td>
+                  <td>12-14</td>
+                  <td>14-21</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Miercuri</td>
+                  <td>9-11</td>
+                  <td>11-13</td>
+                  <td>14-21</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Joi</td>
+                  <td>9-11</td>
+                  <td>11-13</td>
+                  <td>14-21</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Vineri</td>
+                  <td>9-12</td>
+                  <td>12-14</td>
+                  <td>14-19</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td rowspan="2">Weekend</td>
+                  <td>Sâmbătă</td>
+                  <td>10-12</td>
+                  <td>12-13</td>
+                  <td>13-16</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Duminică</td>
+                  <td>10-14</td>
+                  <td>-</td>
+                  <td>închis</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="6">Închis cu ocazia sărbătorilor legale. Pentru comenzi online, livrăm în toată România.</td>
+                </tr>
+              </tfoot>
+            </table>
+        </div> </section>
       </section>
       <figure id="fig1" class="fg-img">
         <img src="resurse/imagini/noname_13-perfume-2142817_1920 (1).jpg" alt="parfum floral"
@@ -347,6 +318,25 @@
         <p><time datetime="2021-02-11">11 februarie 2021</time> Studiile au arătat că un parfum potrivit îți poate
           îmbunătăți starea de spirit și încrederea în sine.
           La Olfacto, vă ajutăm să găsiți fraganța care vi se potrivește perfect. </p>
+      </section>
+      <section id="calendar-evenimente">
+        <h2>Calendar Evenimente</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </section>
+
+      <section id="lista-utilizatori-online">
+        <h2>Utilizatori Online</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+
+      <section id="statistici">
+        <h2>Statistici Utilizator</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+
+      <section id="despre-site-server">
+        <h2>Date Site și Server</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </section>
       <section id="index-intrebari">
         <h2>Întrebări frecvente</h2>
@@ -402,23 +392,6 @@
       </section>
 
     </div>
-    <section id="galerie-statica">
-      <h2>Galerie</h2>
-      <div id="grid-galerie">
-        <figure>
-          <div>
-            <img src="resurse/imagini/mwkum9772-perfume-6013027_1920 (2).jpg" alt="parfum de nișă">
-          </div>
-          <figcaption>Parfum de nișă</figcaption>
-        </figure>
-        <figure>
-          <div>
-            <img src="resurse/imagini/dcwilliams-serum-7675105_1920 (1).jpg" alt="parfum de nișă">
-          </div>
-          <figcaption>Parfum de nișă</figcaption>
-        </figure>
-      </div>
-    </section>
     <section id="ghid">
       <h2>Ghid olfactiv</h2>
       <p>Dacă doriți să înțelegeți mai bine lumea parfumurilor de nișă și să învățați cum se construiește o compoziție
@@ -426,22 +399,29 @@
         vă recomandăm următoarele video-uri educative despre familiile olfactive, piramida unui parfum
         și arta de a alege parfumul perfect. Vizionare plăcută!</p>
       <div class="container-iframe">
-        <div class="taburi-iframe">
-          <a href="https://www.youtube.com/embed/yINqps4aEuQ" target="ifr-video">Cum să alegi parfumul potrivit</a>
-          <a href="https://www.youtube.com/embed/GUKoD2meZHk" target="ifr-video">Familiile olfactive explicate</a>
-          <a href="https://www.youtube.com/embed/nkUvSwXiyjM" target="ifr-video">Top parfumuri de nișă 2026</a><br />
-        </div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/yINqps4aEuQ" name="ifr-video"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+        <div class="taburi-iframe">
+          <a href="https://www.youtube.com/embed/yINqps4aEuQ" target="ifr-video">Cum să alegi<br> parfumul potrivit</a>
+          <a href="https://www.youtube.com/embed/GUKoD2meZHk" target="ifr-video">Familiile olfactive<br> explicate</a>
+          <a href="https://www.youtube.com/embed/nkUvSwXiyjM" target="ifr-video">Top parfumuri<br> de nișă 2026</a><br />
+        </div>
       </div>
     </section>
 
+    <section class="testimoniale">
+      <h3>Clienții noștri spun</h3>
+      <blockquote>"Olfacto mi-a schimbat perspectiva asupra parfumurilor. Am găsit parfumul perfect pentru mine!" — Maria, București</blockquote>
+      <p>⭐⭐⭐⭐⭐ (4.9/5 din 500+ recenzii)</p>
+    </section>
+
   </main>
-  <footer>
-    <a href="#" title="mergi sus" id="link-top">Sus</a>
+  <footer id="contact">
+    <a href="#" id="buton-sus" title="Revino la începutul paginii" aria-label="Spre începutul paginii">
+    <span class="sageata-sus">&#129081;</span>
+</a>
 
     <address>
       <p>Informații de contact:</p>

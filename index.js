@@ -1,25 +1,53 @@
-const express= require("express");
-const path= require("path");
-const fs=require("fs");
-const sass=require("sass");
-const sharp= require("sharp");
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+const sass = require("sass");
+const sharp = require("sharp");
 
-app= express();
+// const ejs=require('ejs');
+const pg = require("pg");
+
+app = express();
 app.set("view engine", "ejs")
 
 
 
-obGlobal={
-    obErori:null,
-    obImagini:null,
-    folderScss: path.join(__dirname,"resurse/scss"),
-    folderCss: path.join(__dirname,"resurse/css"),
-    folderBackup: path.join(__dirname,"backup"),
+
+
+obGlobal = {
+    obErori: null,
+    obImagini: null,
+    folderScss: path.join(__dirname, "resurse/scss"),
+    folderCss: path.join(__dirname, "resurse/css"),
+    folderBackup: path.join(__dirname, "backup"),
 }
 
 console.log("Folder index.js", __dirname);
 console.log("Folder curent (de lucru)", process.cwd());
 console.log("Cale fisier", __filename);
+
+
+
+client = new pg.Client({
+    database: "cti_2026",
+    user: "alex",
+    password: "alex",
+    host: "localhost",
+    port: 5432
+})
+
+client.connect()
+
+client.query("select * from prajituri where id>3", function (err, rez) {
+    if (err) {
+        console.log("Eroare", err)
+    }
+    else {
+        console.log(rez)
+    }
+})
+
+
 
 let vect_foldere=[ "temp", "logs", "backup", "fisiere_uploadate" ]
 for (let folder of vect_foldere){
@@ -30,11 +58,18 @@ for (let folder of vect_foldere){
 }
 
 app.use("/resurse",express.static(path.join(__dirname, "resurse")));
-app.use("/dist",express.static(path.join(__dirname, "/node_modules/bootstrap/dist")));
+app.use("/dist",express.static(path.join(__dirname, "node_modules/bootstrap/dist")));
 
 app.get("/favicon.ico", function(req, res){
     res.sendFile(path.join(__dirname,"resurse/imagini/favicon/favicon.ico"))
 });
+
+
+// app.use("/*",function(req, res, next){
+//     res.locals.vazutDeToti=[1,2,3];
+  
+//     next();
+// })
 
 app.get(["/", "/index","/home"], function(req, res){
     res.render("pagini/index", {
@@ -43,9 +78,56 @@ app.get(["/", "/index","/home"], function(req, res){
     });
 });
 
-// app.get("/despre", function(req, res){
-//     res.render("pagini/despre");
-// });
+
+// select * from unnest(enum_range(null::categ_prajitura))
+app.get("/produse", function(req, res){
+    let clauzaWhere=""
+    if (req.query.tip)
+        clauzaWhere=`where tip_produs='${req.query.tip}'`
+    client.query(`select * from prajituri ${clauzaWhere}`, function(err, rez){
+        if (err){
+            console.log("Eroare", err)
+            afisareEroare(res,2)
+        }
+        else{
+            client.query("select * from unnest(enum_range(null::categ_prajitura))", function(err, rezOptiuni){
+                if (err){
+                    afisareEroare(res,2)
+                }
+                else{
+                    res.render("pagini/produse",{
+                        produse:rez.rows,
+                        optiuni:rezOptiuni.rows
+                    })
+                }
+            })
+            
+        }
+    })
+})
+
+
+app.get("/produs/:id", function(req, res){
+    client.query(`select * from prajituri where id=${req.params.id}`, function(err, rez){
+    if (err){
+        console.log("Eroare", err)
+        afisareEroare(res,2)
+    }
+    else{
+        if (rez.rowCount==0){
+            afisareEroare(res,404,"Produs inexistent")
+        }
+        else{
+            
+            res.render("pagini/produs",{
+                prod:rez.rows[0],
+            })
+        }
+        
+    }
+})
+})
+
 
 
 
@@ -82,11 +164,33 @@ function afisareEroare(res, identificator, titlu, text, imagine){
 
 }
 
+// app.get("*/galerie-animata.css",function(req, res){
 
-app.get("/eroare", function(req, res){
-    afisareEroare(res,404, "Titlu!!!")
-});
+//     var sirScss=fs.readFileSync(path.join(__dirname,"resurse/scss_ejs/galerie_animata.scss")).toString("utf8");
+//     var culori=["navy","black","purple","grey"];
+//     var indiceAleator=Math.floor(Math.random()*culori.length);
+//     var culoareAleatoare=culori[indiceAleator]; 
+//     rezScss=ejs.render(sirScss,{culoare:culoareAleatoare});
+//     console.log(rezScss);
+//     var caleScss=path.join(__dirname,"temp/galerie_animata.scss")
+//     fs.writeFileSync(caleScss,rezScss);
+//     try {
+//         rezCompilare=sass.compile(caleScss,{sourceMap:true});
+        
+//         var caleCss=path.join(__dirname,"temp/galerie_animata.css");
+//         fs.writeFileSync(caleCss,rezCompilare.css);
+//         res.setHeader("Content-Type","text/css");
+//         res.sendFile(caleCss);
+//     }
+//     catch (err){
+//         console.log(err);
+//         res.send("Eroare");
+//     }
+// });
 
+// app.get("*/galerie-animata.css.map",function(req, res){
+//     res.sendFile(path.join(__dirname,"temp/galerie-animata.css.map"));
+// });
 
 function initImagini(){
     var continut= fs.readFileSync(path.join(__dirname,"resurse/json/galerie.json")).toString("utf-8");

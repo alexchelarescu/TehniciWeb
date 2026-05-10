@@ -28,27 +28,15 @@ ul.meniu {
 }
 
 ul.meniu ul {
-  display: block;
+  display: none;
   position: absolute;
   z-index: 17;
-  transform-origin: center top;
-  transform: scaleY(0);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.25s linear, opacity 0.25s linear;
 }
 
 ul.meniu li:hover ul {
-  transform: scaleY(1);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-ul.meniu li:hover > ul,
-ul.meniu li:focus-within > ul {
-  transform: scaleY(1);
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
+  animation: animatie_submeniu 0.25s linear;
+  transform-origin: center top;
 }
 
 @keyframes animatie_submeniu {
@@ -68,62 +56,29 @@ ul.meniu li {
   width: var(--latime-buton);
   height: var(--inaltime-buton);
   background-color: var(--culoare-fundal);
-  border: 1px solid var(--culoare-contur);
-  color: black;
+  border: 1px solid var(--culoare-detalii);
+  color: var(--culoare-text);
   text-align: center;
   line-height: var(--inaltime-buton);
-  /* text-decoration: none; */
-  /* border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px; */
-  /* margin-right: 10px; */
   transition: all 0.1s linear;
   font-weight: bold;
 }
 
 ul.meniu li a {
-  color: black;
+  color: var(--culoare-text);
   text-decoration: none;
   transition: all 0.1s linear;
   display: block;
   width: 100%;
   height: 100%;
-  white-space: nowrap;
 }
 
-ul.meniu li:hover {
-  background-color: var(--culoare-contur);
-  color: white;
+ul.meniu li:hover,
+ul.meniu li:active {
+  background-color: var(--culoare-highlight);
 }
 
-ul.meniu > li a:hover, ul.meniu li:hover .text-icon a {
-  color: white !important;
-}
-
-ul.meniu > li > a {
-  overflow: hidden;
-  text-shadow: 0 -1.2em 0 white;
-  transition: text-shadow 0.25s linear, color 0.25s linear;
-}
-
-ul.meniu > li:hover > a {
-  text-shadow: 0 0 0 white;
-}
-
-ul.meniu ul li a {
-  position: relative;
-}
-
-ul.meniu ul li a::after {
-  content: "";
-  position: absolute;
-  left: 10%;
-  bottom: 8px;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.25s linear;
-}
-
-ul.meniu ul li:hover > a::after {
-  width: 80%;
+ul.meniu > li a:hover,
+ul.meniu li:hover .text-icon a {
+  color: var(--culoare-text) !important;
 }
